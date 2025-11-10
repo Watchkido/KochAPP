@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezept hinzufügen - Smart Recipe Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+    <script src="recipe-db.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Smart Recipe Hub</h1>
+            <p class="tagline">Kochen leicht gemacht – in 5 Minuten zum passenden Rezept!</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="recipes.html">Alle Rezepte</a></li>
+                <li><a href="add-recipe.html" class="active">Rezept hinzufügen</a></li>
+                <li><a href="favorites.html">Favoriten</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2>Neues Rezept hinzufügen</h2>
+        
+        <form id="add-recipe-form">
+            <div class="form-group">
+                <label for="title">Rezepttitel *</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="description">Beschreibung</label>
+                <textarea id="description" name="description" placeholder="Kurze Beschreibung des Rezepts"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="ingredients">Zutaten * (eine Zutat pro Zeile)</label>
+                <textarea id="ingredients" name="ingredients" required placeholder="z.B.:
+200g Nudeln
+2 Knoblauchzehen
+1 EL Olivenöl"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="instructions">Zubereitung * (ein Schritt pro Zeile)</label>
+                <textarea id="instructions" name="instructions" required placeholder="z.B.:
+1. Nudeln kochen
+2. Knoblauch anbraten
+3. Alles vermengen"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="preparation_time">Zubereitungszeit (in Minuten) *</label>
+                <input type="number" id="preparation_time" name="preparation_time" min="1" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="category">Kategorie</label>
+                <select id="category" name="category">
+                    <option value="">Bitte wählen</option>
+                    <option value="Frühstück">Frühstück</option>
+                    <option value="Hauptgericht">Hauptgericht</option>
+                    <option value="Vorspeise">Vorspeise</option>
+                    <option value="Dessert">Dessert</option>
+                    <option value="Snack">Snack</option>
+                    <option value="Getränk">Getränk</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="calories">Kalorien (optional)</label>
+                <input type="number" id="calories" name="calories" min="0" placeholder="z.B. 450">
+            </div>
+            
+            <div class="form-group">
+                <label for="image_url">Bild-URL (optional)</label>
+                <input type="text" id="image_url" name="image_url" placeholder="z.B. images/mein-rezept.jpg">
+                <small>Tipp: Lege Bilder im Ordner "images/" ab und gib den Pfad wie "images/dateiname.jpg" an</small>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="btn primary">Rezept speichern</button>
+                <a href="recipes.html" class="btn secondary">Abbrechen</a>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Smart Recipe Hub. Ein agiles Projekt umgesetzt mit Scrum.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initDatabase().then(() => {
+                setupRecipeForm();
+            });
+        });
+    </script>
+</body>
+</html>

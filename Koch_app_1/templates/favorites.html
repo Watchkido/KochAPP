@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Meine Favoriten{% endblock %}
+
+{% block content %}
+<section class="favorites-section">
+    <h1><i class="fas fa-heart"></i> Meine Favoriten</h1>
+    
+    {% if recipes %}
+        <div class="recipes-grid">
+            {% for recipe in recipes %}
+                <div class="recipe-card">
+                    <div class="recipe-header">
+                        <h3>{{ recipe.title }}</h3>
+                        <button class="favorite-btn" onclick="toggleFavorite('{{ recipe.id }}')" data-recipe-id="{{ recipe.id }}">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="recipe-meta">
+                        <span class="prep-time">
+                            <i class="fas fa-clock"></i>
+                            {{ recipe.prep_time }} Min
+                        </span>
+                        <span class="category {{ recipe.category|lower|replace(' ', '-') }}">
+                            {{ recipe.category }}
+                        </span>
+                    </div>
+                    
+                    <p class="recipe-description">{{ recipe.description }}</p>
+                    
+                    <div class="recipe-actions">
+                        <a href="{{ url_for('recipe_detail', recipe_id=recipe.id) }}" class="btn btn-secondary">
+                            Rezept ansehen
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="empty-state">
+            <i class="far fa-heart"></i>
+            <h3>Noch keine Favoriten</h3>
+            <p>Markieren Sie Rezepte als Favoriten, indem Sie auf das Herz-Symbol klicken.</p>
+            <a href="{{ url_for('index') }}" class="btn btn-primary">
+                Rezepte entdecken
+            </a>
+        </div>
+    {% endif %}
+</section>
+{% endblock %}

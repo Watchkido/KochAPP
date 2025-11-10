@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Datenbank Test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+    <script src="recipe-db.js"></script>
+</head>
+<body>
+    <h1>Datenbank Test</h1>
+    <button onclick="testDB()">Datenbank testen</button>
+    <button onclick="clearDB()">LocalStorage löschen</button>
+    <pre id="output"></pre>
+
+    <script>
+        async function testDB() {
+            const output = document.getElementById('output');
+            output.textContent = 'Initialisiere Datenbank...\n';
+            
+            await initDatabase();
+            output.textContent += 'Datenbank initialisiert\n';
+            
+            const recipes = getAllRecipes();
+            output.textContent += `Anzahl Rezepte: ${recipes.length}\n\n`;
+            
+            if (recipes.length > 0) {
+                output.textContent += 'Erste 3 Rezepte:\n';
+                recipes.slice(0, 3).forEach(r => {
+                    output.textContent += `\nID: ${r.id}\n`;
+                    output.textContent += `Titel: ${r.title}\n`;
+                    output.textContent += `Bild: ${r.image_url || 'KEIN BILD!'}\n`;
+                    output.textContent += `Kalorien: ${r.calories || 'keine'}\n`;
+                    output.textContent += `Favorit: ${r.is_favorite}\n`;
+                });
+            } else {
+                output.textContent += 'KEINE REZEPTE GEFUNDEN!\n';
+            }
+        }
+        
+        function clearDB() {
+            localStorage.removeItem('recipeDatabase');
+            alert('LocalStorage gelöscht! Seite neu laden.');
+            location.reload();
+        }
+    </script>
+</body>
+</html>

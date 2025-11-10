@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Recipe Hub - {% block title %}Kochen leicht gemacht{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-utensils"></i>
+                    <span>Smart Recipe Hub</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="{{ url_for('index') }}" class="nav-link">Alle Rezepte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('favorites') }}" class="nav-link">Favoriten</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('add_recipe') }}" class="nav-link btn-primary">Rezept hinzufügen</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash-message {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Smart Recipe Hub - Kochen leicht gemacht in 5 Minuten!</p>
+        </div>
+    </footer>
+
+    <script>
+        // Favoriten-Funktionalität
+        function toggleFavorite(recipeId) {
+            fetch(`/toggle-favorite/${recipeId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        const heart = document.querySelector(`.favorite-btn[data-recipe-id="${recipeId}"] i`);
+                        if (heart.classList.contains('fas')) {
+                            heart.className = 'far fa-heart';
+                        } else {
+                            heart.className = 'fas fa-heart';
+                        }
+                    }
+                });
+        }
+    </script>
+</body>
+</html>

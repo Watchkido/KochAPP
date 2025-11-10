@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Recipe Hub - Kochen leicht gemacht</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+    <script src="recipe-db.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Smart Recipe Hub</h1>
+            <p class="tagline">Kochen leicht gemacht – in 5 Minuten zum passenden Rezept!</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="active">Startseite</a></li>
+                <li><a href="recipes.html">Alle Rezepte</a></li>
+                <li><a href="add-recipe.html">Rezept hinzufügen</a></li>
+                <li><a href="favorites.html">Favoriten</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Willkommen beim Smart Recipe Hub</h2>
+            <p>Ihre digitale Anlaufstelle für schnelle, gesunde und inspirierende Rezepte</p>
+            <div class="cta-buttons">
+                <a href="recipes.html" class="btn primary">Rezepte entdecken</a>
+                <a href="add-recipe.html" class="btn secondary">Eigenes Rezept teilen</a>
+            </div>
+        </section>
+
+        <section class="featured-recipes">
+            <h2>Beliebte Rezepte</h2>
+            <div id="featured-recipes-list" class="recipe-grid">
+                <!-- Featured recipes will be loaded here by JavaScript -->
+            </div>
+        </section>
+
+        <section class="quick-stats">
+            <div class="stat-card">
+                <h3 id="total-recipes">0</h3>
+                <p>Rezepte verfügbar</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="quick-recipes">0</h3>
+                <p>Rezepte unter 15 Min.</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="favorite-count">0</h3>
+                <p>Favoriten gesamt</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Smart Recipe Hub. Ein agiles Projekt umgesetzt mit Scrum.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initDatabase().then(() => {
+                loadFeaturedRecipes();
+                updateStats();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoriten - Smart Recipe Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+    <script src="recipe-db.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Smart Recipe Hub</h1>
+            <p class="tagline">Kochen leicht gemacht – in 5 Minuten zum passenden Rezept!</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="recipes.html">Alle Rezepte</a></li>
+                <li><a href="add-recipe.html">Rezept hinzufügen</a></li>
+                <li><a href="favorites.html" class="active">Favoriten</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2>Ihre Favoriten</h2>
+        
+        <div id="favorites-list" class="recipe-grid">
+            <!-- Favoriten werden hier geladen -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Smart Recipe Hub. Ein agiles Projekt umgesetzt mit Scrum.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initDatabase().then(() => {
+                // Favoriten werden automatisch durch script.js geladen
+            });
+        });
+    </script>
+</body>
+</html>
