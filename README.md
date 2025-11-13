@@ -2,7 +2,7 @@
 
 > **Die intelligente Rezept-Plattform für moderne Köche**
 
-![Smart Recipe Hub Screenshot](doc/Screenshot.png)
+![Smart Recipe Hub Screenshot](Koch_App_2/images/Screenshot.png)
 
 ---
 
