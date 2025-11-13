@@ -67,10 +67,31 @@
     </aside>
 
     <header>
-        <div class="container">
-            <h1>Smart Recipe Hub</h1>
-            <p class="tagline">Kochen leicht gemacht – in 5 Minuten zum passenden Rezept!</p>
+        <div class="header-flex">
+            <img src="images/weisses_logo.png" alt="Logo" class="logo" id="mainLogo">
+            <div class="header-center">
+                <h1>YammyGo</h1>
+                <p class="tagline">Kochen leicht gemacht – in 5 Minuten zum passenden Rezept!</p>
+            </div>
         </div>
+    <style>
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            left: 0;
+            height: 180px;
+            margin-left: 20px;
+        }
+        .header-center {
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
     </header>
 
     <nav>
@@ -86,7 +107,7 @@
 
     <main class="container" id="main-content">
         <section class="hero">
-            <h2>Willkommen beim Smart Recipe Hub</h2>
+            <h2>Willkommen beim YummyGo</h2>
             <p>Ihre digitale Anlaufstelle für schnelle, gesunde und inspirierende Rezepte</p>
             <div class="cta-buttons">
                 <a href="recipes.html" class="btn primary">Rezepte entdecken</a>

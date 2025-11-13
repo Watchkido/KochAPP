@@ -177,7 +177,7 @@ function insertDemoData() {
             },
             {
                 title: "Avocado-Toast",
-                description: "Gesunder Trend-Snack",
+                description: "Gesunder Trend-Snack (vegan)",
                 ingredients: "2 Scheiben Vollkornbrot\n1 reife Avocado\nSalz Pfeffer Zitrone\nChiliflocken optional",
                 instructions: "Brot toasten\nAvocado halbieren und Kern entfernen\nMit Gabel zerdrücken\nMit Zitronensaft Salz und Pfeffer würzen\nAuf Toast streichen",
                 preparation_time: 8,
@@ -222,7 +222,8 @@ function insertDemoData() {
                 instructions: "Gemüse waschen und schneiden\nÖl in Pfanne erhitzen\nZwiebel anbraten\nGemüse hinzufügen\n10 Min braten",
                 preparation_time: 20,
                 category: "Hauptgericht",
-                calories: 260
+                calories: 260,
+                image_url: "images/salat2.jpg"
             },
             {
                 title: "French Toast",

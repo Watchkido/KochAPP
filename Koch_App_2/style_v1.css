@@ -25,7 +25,7 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #87d872 0%, #87d872 100%);
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
     color: white;
     padding: 2rem 0;
     text-align: center;
@@ -43,7 +43,7 @@ header h1 {
 
 /* Navigation */
 nav {
-    background-color: #eca96a;
+    background-color: #333;
     padding: 1rem 0;
 }
 
@@ -254,7 +254,7 @@ textarea {
 
 /* Footer */
 footer {
-    background-color: #e2a469;
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 1.5rem 0;
@@ -456,9 +456,7 @@ footer {
 }
 
 .sidebar::-webkit-scrollbar-track {
-    background: #0380fd;
-
-    
+    background: #34495e;
 }
 
 .sidebar::-webkit-scrollbar-thumb {

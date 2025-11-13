@@ -254,7 +254,7 @@ textarea {
 
 /* Footer */
 footer {
-    background-color: #e2a469;
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 1.5rem 0;
@@ -456,9 +456,7 @@ footer {
 }
 
 .sidebar::-webkit-scrollbar-track {
-    background: #0380fd;
-
-    
+    background: #34495e;
 }
 
 .sidebar::-webkit-scrollbar-thumb {
