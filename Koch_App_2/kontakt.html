@@ -35,7 +35,6 @@
         </ul>
         <h3 style="margin-top: 30px;">Informationen</h3>
         <ul>
-            <li><a href="team.html">👥 Über uns / Team</a></li>
             <li><a href="kontakt.html" class="active">📧 Kontakt</a></li>
             <li><a href="faq.html">❓ FAQ / Hilfe</a></li>
             <li><a href="tutorial.html">📚 Tutorial</a></li>
@@ -44,16 +43,9 @@
         <ul>
             <li><a href="export.html">📄 Rezepte exportieren</a></li>
             <li><a href="feedback.html">💬 Feedback</a></li>
-            <li><a href="changelog.html">🆕 Changelog</a></li>
-            <li><a href="community.html">👨‍👩‍👧‍👦 Community</a></li>
-            <li><a href="app.html">📱 Mobile App</a></li>
+
         </ul>
-        <h3 style="margin-top: 30px;">Externe Links</h3>
-        <ul>
-            <li><a href="https://kanban.multi-channel-network.de/" target="_blank">📋 Kanbanboard</a></li>
-            <li><a href="https://dataanalyst.stadtwettkampf.de/" target="_blank">🏆 Stadtwettkampf</a></li>
-            <li><a href="https://github.com/Watchkido/KochAPP" target="_blank">💻 GitHub</a></li>
-        </ul>
+       
         <h3 style="margin-top: 30px;">Rechtliches</h3>
         <ul>
             <li><a href="impressum.html">ℹ️ Impressum</a></li>
@@ -82,7 +74,33 @@
 
     <main class="container" id="main-content">
         <h2>Kontakt</h2>
-        <p style="color: #666; font-style: italic;">Dies ist die Kontaktseite. Hier können Kontaktinformationen, ein Kontaktformular oder E-Mail-Adressen für Feedback und Support stehen.</p>
+        <section style="background: #fff; padding: 2rem; border-radius: 8px; margin-bottom: 2rem; max-width: 600px;">
+            <h3>Kontaktinformationen</h3>
+            <p>
+                <strong>E-Mail:</strong> kontakt@yummygo.de<br>
+                <strong>Telefon:</strong> 01234 / 567890<br>
+                <strong>Adresse:</strong> Musterstraße 12, 12345 Musterstadt<br>
+            </p>
+        </section>
+        <section style="background: #f9f9f9; padding: 2rem; border-radius: 8px; max-width: 600px;">
+            <h3>Kontaktformular</h3>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Ihr Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Ihre E-Mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Nachricht</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn primary">Absenden</button>
+            </form>
+            <p style="color: #666; font-size: 0.9em; margin-top: 1rem;">Wir melden uns schnellstmöglich bei Ihnen!</p>
+        </section>
     </main>
 
     <footer>
