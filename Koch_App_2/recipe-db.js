@@ -1,5 +1,5 @@
 /**
- * recipe-db.js
+ * recipe-db.js Frank
  * Datenbank-Logik für Smart Recipe Hub (SQL.js, LocalStorage).
  * Entwicklerhinweis: Hier werden alle Datenbankoperationen für Rezepte umgesetzt.
  */
