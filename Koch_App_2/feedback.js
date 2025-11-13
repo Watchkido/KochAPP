@@ -1,3 +1,8 @@
+/**
+ * feedback.js
+ * Feedback- und Voting-Logik für Smart Recipe Hub.
+ * Entwicklerhinweis: Hier werden Formularverarbeitung, Mailto und Feature-Voting umgesetzt.
+ */
 // Feedback-Formular JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('feedbackForm');

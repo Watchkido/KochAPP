@@ -1,3 +1,9 @@
+/**
+ * sidebar.js
+ * Steuerung der Sidebar für Smart Recipe Hub.
+ * Entwicklerhinweis: Hier wird das Öffnen/Schließen und die Overlay-Logik umgesetzt.
+ */
+
 // Sidebar Toggle Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menuToggle');

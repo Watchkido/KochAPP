@@ -1,3 +1,8 @@
+/**
+ * script.js
+ * UI- und Rezeptlogik für Smart Recipe Hub.
+ * Entwicklerhinweis: Hier werden alle Interaktionen und die Anzeige der Rezepte gesteuert.
+ */
 // Gemeinsame Funktionen für alle Seiten
 document.addEventListener('DOMContentLoaded', function() {
     // Navigation aktiver Link

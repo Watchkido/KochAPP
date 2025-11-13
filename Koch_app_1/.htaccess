@@ -1,6 +1,0 @@
-# .htaccess für Shared Hosting mit Python-Support
-# Nur wenn Ihr Hoster mod_wsgi unterstützt
-
-RewriteEngine On
-RewriteBase /
-RewriteRule ^(.*)$ wsgi.py/$1 [QSA,PT,L]

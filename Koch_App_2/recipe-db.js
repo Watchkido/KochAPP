@@ -1,3 +1,9 @@
+/**
+ * recipe-db.js
+ * Datenbank-Logik für Smart Recipe Hub (SQL.js, LocalStorage).
+ * Entwicklerhinweis: Hier werden alle Datenbankoperationen für Rezepte umgesetzt.
+ */
+
 // SQL.js Initialisierung und Datenbank-Funktionen
 let db = null;
 let SQL = null;

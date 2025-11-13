@@ -10,7 +10,7 @@ import json
 import os
 
 # Pfad zur CSV-Datei (relativ oder absolut)
-CSV_FILE = '../Koch_app_1/recipes.csv'
+CSV_FILE = '../Koch_app_1/z_recipes.csv'
 OUTPUT_FILE = 'recipe-db.js'
 
 def convert_csv_to_js():

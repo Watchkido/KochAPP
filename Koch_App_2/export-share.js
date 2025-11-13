@@ -1,4 +1,9 @@
 // Export & Share Funktionen für Smart Recipe Hub
+/**
+ * export-share.js
+ * Export- und Sharing-Funktionen für Smart Recipe Hub.
+ * Entwicklerhinweis: Hier werden PDF-Export, Social Sharing und Daten-Backup umgesetzt.
+ */
 let selectedRecipe = null;
 
 // Initialisierung
