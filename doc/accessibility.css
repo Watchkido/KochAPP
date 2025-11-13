@@ -1,0 +1,362 @@
+/* Barrierefreiheits-Widget Styling */
+#accessibility-widget {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+}
+
+#accessibility-toggle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0066cc 0%, #004999 100%);
+    color: white;
+    border: 3px solid white;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#accessibility-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+#accessibility-toggle:focus {
+    outline: 3px solid #ffcc00;
+    outline-offset: 3px;
+}
+
+.accessibility-panel {
+    position: fixed;
+    left: -400px;
+    top: 0;
+    width: 380px;
+    height: 100vh;
+    background: white;
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.3);
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    z-index: 9998;
+}
+
+.accessibility-panel.open {
+    left: 0;
+}
+
+.accessibility-header {
+    background: linear-gradient(135deg, #0066cc 0%, #004999 100%);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.accessibility-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#accessibility-close {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+#accessibility-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#accessibility-close:focus {
+    outline: 2px solid #ffcc00;
+}
+
+.accessibility-content {
+    padding: 1.5rem;
+}
+
+.accessibility-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.accessibility-section:last-of-type {
+    border-bottom: none;
+}
+
+.accessibility-section h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.button-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.button-group-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.accessibility-section button {
+    padding: 0.75rem 1rem;
+    border: 2px solid #0066cc;
+    background: white;
+    color: #0066cc;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.accessibility-section button:hover {
+    background: #0066cc;
+    color: white;
+}
+
+.accessibility-section button:focus {
+    outline: 3px solid #ffcc00;
+    outline-offset: 2px;
+}
+
+.toggle-btn.active {
+    background: #0066cc;
+    color: white;
+}
+
+.button-group button {
+    flex: 1;
+    justify-content: center;
+}
+
+.text-size-indicator {
+    margin-top: 0.75rem;
+    padding: 0.5rem;
+    background: #f5f5f5;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 500;
+}
+
+#text-size-value {
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.reset-btn {
+    width: 100%;
+    background: #dc3545 !important;
+    color: white !important;
+    border-color: #dc3545 !important;
+    justify-content: center;
+}
+
+.reset-btn:hover {
+    background: #c82333 !important;
+}
+
+.accessibility-footer {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.accessibility-footer a {
+    color: #0066cc;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.accessibility-footer a:hover {
+    background: #f0f0f0;
+    text-decoration: underline;
+}
+
+.accessibility-footer a:focus {
+    outline: 3px solid #ffcc00;
+    outline-offset: 2px;
+}
+
+/* Barrierefreiheits-Modi */
+
+/* Graustufen */
+body.a11y-grayscale {
+    filter: grayscale(100%);
+}
+
+/* Hoher Kontrast */
+body.a11y-high-contrast {
+    background: white !important;
+}
+
+body.a11y-high-contrast * {
+    color: black !important;
+    border-color: black !important;
+}
+
+body.a11y-high-contrast a {
+    color: #0000ff !important;
+    font-weight: bold;
+}
+
+body.a11y-high-contrast button,
+body.a11y-high-contrast .btn {
+    background: black !important;
+    color: white !important;
+    border: 2px solid black !important;
+}
+
+body.a11y-high-contrast header,
+body.a11y-high-contrast nav,
+body.a11y-high-contrast footer {
+    background: black !important;
+    color: white !important;
+}
+
+body.a11y-high-contrast header *,
+body.a11y-high-contrast nav *,
+body.a11y-high-contrast footer * {
+    color: white !important;
+}
+
+/* Negativer Kontrast (Dunkelmodus) */
+body.a11y-negative-contrast {
+    background: #1a1a1a !important;
+    color: #ffffff !important;
+}
+
+body.a11y-negative-contrast * {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border-color: #666 !important;
+}
+
+body.a11y-negative-contrast a {
+    color: #66b3ff !important;
+}
+
+body.a11y-negative-contrast button,
+body.a11y-negative-contrast .btn {
+    background: #333 !important;
+    color: #fff !important;
+}
+
+body.a11y-negative-contrast .recipe-card,
+body.a11y-negative-contrast .hero,
+body.a11y-negative-contrast .stat-card {
+    background: #2a2a2a !important;
+    border-color: #444 !important;
+}
+
+/* Heller Hintergrund */
+body.a11y-light-background {
+    background: #ffffff !important;
+}
+
+body.a11y-light-background main,
+body.a11y-light-background .container {
+    background: #ffffff !important;
+}
+
+body.a11y-light-background .recipe-card,
+body.a11y-light-background .hero,
+body.a11y-light-background .stat-card {
+    background: #f9f9f9 !important;
+    border: 2px solid #ddd !important;
+}
+
+/* Links unterstreichen */
+body.a11y-underline-links a {
+    text-decoration: underline !important;
+}
+
+/* Lesbare Schriftart */
+body.a11y-readable-font,
+body.a11y-readable-font * {
+    font-family: 'Arial', 'Helvetica', sans-serif !important;
+    letter-spacing: 0.05em !important;
+    line-height: 1.8 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .accessibility-panel {
+        width: 100%;
+        left: -100%;
+    }
+    
+    #accessibility-toggle {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+}
+
+/* Animationen für bessere UX */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+#accessibility-toggle:active {
+    animation: pulse 0.3s ease;
+}
+
+/* Focus-Sichtbarkeit verbessern */
+*:focus-visible {
+    outline: 3px solid #ffcc00 !important;
+    outline-offset: 2px !important;
+}
+
+/* Skip-to-Content Link (versteckt, aber für Screen Reader sichtbar) */
+.skip-to-content {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background-color: #0066cc;
+    color: white;
+    text-decoration: none;
+}
+
+.skip-to-content:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+}
