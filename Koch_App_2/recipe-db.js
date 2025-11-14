@@ -439,7 +439,7 @@ function insertDemoData() {
                 `INSERT INTO recipes (title, description, ingredients, instructions, preparation_time, category, image_url, calories) 
                  VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
                 [recipe.title, recipe.description, recipe.ingredients, recipe.instructions, 
-                 recipe.preparation_time, recipe.category, recipe.image_url || null, recipe.calories || null]
+                 recipe.preparation_time, recipe.category, 'images/placeholder.svg', recipe.calories || null]
             );
         });
         
