@@ -1,6 +1,6 @@
 <!--
     tutorial.html
-    Tutorial- und Hilfeseite für Smart Recipe Hub.
+    Tutorial- und Hilfeseite für YummyGo.
     Entwicklerhinweis: Hier werden Schritt-für-Schritt-Anleitungen gepflegt.
 -->
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial - Smart Recipe Hub</title>
+    <title>Tutorial - YummyGo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="accessibility.css">
     <script src="accessibility.js"></script>
@@ -28,26 +28,23 @@
     <aside class="sidebar" id="sidebar">
         <h3>Navigation</h3>
         <ul>
-            <li><a href="index.html">🏠 Startseite</a></li>
+            <li><a href="index.html" class="active">🏠 Startseite</a></li>
             <li><a href="recipes.html">📖 Alle Rezepte</a></li>
             <li><a href="add-recipe.html">➕ Rezept hinzufügen</a></li>
             <li><a href="favorites.html">❤️ Favoriten</a></li>
         </ul>
         <h3 style="margin-top: 30px;">Informationen</h3>
         <ul>
-            <li><a href="team.html">👥 Über uns / Team</a></li>
+
             <li><a href="kontakt.html">📧 Kontakt</a></li>
             <li><a href="faq.html">❓ FAQ / Hilfe</a></li>
-            <li><a href="tutorial.html" class="active">📚 Tutorial</a></li>
+            <li><a href="tutorial.html">📚 Tutorial</a></li>
         </ul>
         <h3 style="margin-top: 30px;">Weitere Funktionen</h3>
         <ul>
             <li><a href="export.html">📄 Rezepte exportieren</a></li>
             <li><a href="feedback.html">💬 Feedback</a></li>
-            <li><a href="community.html">👨‍👩‍👧‍👦 Community</a></li>
-            <li><a href="app.html">📱 Mobile App</a></li>
         </ul>
-      
         <h3 style="margin-top: 30px;">Rechtliches</h3>
         <ul>
             <li><a href="impressum.html">ℹ️ Impressum</a></li>
@@ -56,11 +53,33 @@
         </ul>
     </aside>
 
+
     <header>
-        <div class="container">
-            <h1>Smart Recipe Hub</h1>
-            <p class="tagline">Kochen leicht gemacht – in 5 Minuten zum passenden Rezept!</p>
+        <div class="header-flex">
+            <img src="images/weisses_logo.png" alt="Logo" class="logo" id="mainLogo">
+            <div class="header-center">
+                <h1>YummyGo</h1>
+                <p class="tagline">Kochen leicht gemacht – in 5 Minuten zum passenden Rezept!</p>
+            </div>
         </div>
+    <style>
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            left: 0;
+            height: 180px;
+            margin-left: 20px;
+        }
+        .header-center {
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
     </header>
 
     <nav>
@@ -75,7 +94,7 @@
     </nav>
 
     <main class="container" id="main-content">
-        <h2>Tutorial - So nutzen Sie Smart Recipe Hub</h2>
+        <h2>Tutorial - So nutzen Sie YummyGo</h2>
         
         <section style="background: white; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
             <h3>🔍 Schritt 1: Rezepte durchsuchen</h3>
@@ -140,7 +159,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Smart Recipe Hub. Ein agiles Projekt umgesetzt mit Scrum.</p>
+            <p>&copy; 2024 YummyGo. Ein agiles Projekt umgesetzt mit Scrum.</p>
             <p>
                 <a href="impressum.html">Impressum</a> | 
                 <a href="datenschutz.html">Datenschutz</a> |

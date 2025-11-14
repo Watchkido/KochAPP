@@ -1,6 +1,6 @@
 /**
  * sidebar.js
- * Steuerung der Sidebar für Smart Recipe Hub.
+ * Steuerung der Sidebar für YummyGo.
  * Entwicklerhinweis: Hier wird das Öffnen/Schließen und die Overlay-Logik umgesetzt.
  */
 

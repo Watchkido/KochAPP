@@ -1,6 +1,25 @@
+/* FAQ-Antworten optisch abheben */
+.faq-list details {
+    margin-bottom: 1.2rem;
+}
+.faq-list summary {
+    font-size: 1.15rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem 0;
+}
+.faq-answer {
+    background: #f5f8ee;
+    border-left: 4px solid #87d872;
+    margin: 1rem 0 0 0;
+    padding: 1rem 1.5rem;
+    color: #333;
+    border-radius: 6px;
+    font-size: 1rem;
+}
 /*
  * style.css
- * Haupt-Stylesheet für Smart Recipe Hub.
+ * Haupt-Stylesheet für YummyGo.
  * Entwicklerhinweis: Hier werden alle Layouts, Farben und Responsive-Designs gepflegt.
  */
 /* Grundlegende Stile und Reset */
@@ -109,6 +128,35 @@ main {
     background-color: #4CAF50;
     color: white;
 }
+
+.btn.vegan {
+    background-color: #43A047;
+    color: white;
+    border: 2px solid #2E7D32;
+    box-shadow: 0 2px 8px rgba(67,160,71,0.08);
+}
+.btn.vegan:hover {
+    background-color: #388E3C;
+    color: #fff;
+}
+
+.btn.vegetarisch {
+    background-color: #FFA726;
+    color: white;
+    border: 2px solid #F57C00;
+    box-shadow: 0 2px 8px rgba(255,167,38,0.08);
+}
+.btn.vegetarisch:hover {
+    background-color: #F57C00;
+    color: #fff;
+}
+
+.btn.veggie {
+    background-color: #8BC34A;
+    color: white;
+    border: 2px solid #388E3C;
+}
+
 
 .btn.primary:hover {
     background-color: #45a049;
@@ -254,7 +302,7 @@ textarea {
 
 /* Footer */
 footer {
-    background-color: #e2a469;
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 1.5rem 0;
@@ -456,9 +504,7 @@ footer {
 }
 
 .sidebar::-webkit-scrollbar-track {
-    background: #0380fd;
-
-    
+    background: #34495e;
 }
 
 .sidebar::-webkit-scrollbar-thumb {

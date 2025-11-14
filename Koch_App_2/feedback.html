@@ -1,11 +1,11 @@
 <!--
     feedback.html
-    Feedback-Seite für Smart Recipe Hub.
+    Feedback-Seite für YummyGo.
     Entwicklerhinweis: Hier können Nutzer Rückmeldungen und Feature-Wünsche abgeben.
 -->
 <!DOCTYPE html>
 <html lang="de">
-<head><meta charset="UTF-8"><title>Feedback - Smart Recipe Hub</title><link rel="stylesheet" href="style.css">
+<head><meta charset="UTF-8"><title>Feedback - YummyGo</title><link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="accessibility.css"><script src="accessibility.js"></script>
     <script src="sidebar.js"></script></head>
 <body>
@@ -16,11 +16,37 @@
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
 <aside class="sidebar" id="sidebar"><h3>Navigation</h3><ul><li><a href="index.html">🏠 Startseite</a></li><li><a href="recipes.html">📖 Alle Rezepte</a></li><li><a href="add-recipe.html">➕ Rezept hinzufügen</a></li><li><a href="favorites.html">❤️ Favoriten</a></li></ul><h3 style="margin-top: 30px;">Informationen</h3><ul><li><a href="team.html">👥 Über uns / Team</a></li><li><a href="kontakt.html">📧 Kontakt</a></li><li><a href="faq.html">❓ FAQ / Hilfe</a></li><li><a href="tutorial.html">📚 Tutorial</a></li></ul><h3 style="margin-top: 30px;">Weitere Funktionen</h3><ul><li><a href="export.html">📄 Rezepte exportieren</a></li><li><a href="feedback.html" class="active">💬 Feedback</a></li><li><a href="changelog.html">🆕 Changelog</a></li><li><a href="community.html">👨‍👩‍👧‍👦 Community</a></li><li><a href="app.html">📱 Mobile App</a></li></ul><h3 style="margin-top: 30px;">Externe Links</h3><ul><li><a href="https://kanban.multi-channel-network.de/" target="_blank">📋 Kanbanboard</a></li><li><a href="https://dataanalyst.stadtwettkampf.de/" target="_blank">🏆 Stadtwettkampf</a></li><li><a href="https://watchkido.github.io/KochAPP/" target="_blank">💻 GitHub</a></li></ul><h3 style="margin-top: 30px;">Rechtliches</h3><ul><li><a href="impressum.html">ℹ️ Impressum</a></li><li><a href="datenschutz.html">🔒 Datenschutz</a></li><li><a href="agb.html">📜 AGB</a></li></ul></aside>
-<header><div class="container"><h1>Smart Recipe Hub</h1><p class="tagline">Kochen leicht gemacht</p></div></header>
+<header>
+        <div class="header-flex">
+            <img src="images/weisses_logo.png" alt="Logo" class="logo" id="mainLogo">
+            <div class="header-center">
+                <h1>YummyGo</h1>
+                <p class="tagline">Kochen leicht gemacht – in 5 Minuten zum passenden Rezept!</p>
+            </div>
+        </div>
+    <style>
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            left: 0;
+            height: 180px;
+            margin-left: 20px;
+        }
+        .header-center {
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
+    </header>
 <nav><div class="container"><ul><li><a href="index.html">Startseite</a></li><li><a href="recipes.html">Alle Rezepte</a></li><li><a href="add-recipe.html">Rezept hinzufügen</a></li><li><a href="favorites.html">Favoriten</a></li></ul></div></nav>
 <main class="container" id="main-content">
         <h2>💬 Feedback & Verbesserungsvorschläge</h2>
-        <p>Deine Meinung ist uns wichtig! Teile uns mit, wie wir den Smart Recipe Hub noch besser machen können.</p>
+        <p>Deine Meinung ist uns wichtig! Teile uns mit, wie wir den YummyGo noch besser machen können.</p>
 
         <!-- Feedback-Formular -->
         <div class="feedback-form-section">
@@ -79,41 +105,6 @@
             </div>
         </div>
 
-        <hr style="margin: 50px 0; border: 1px solid #ddd;">
-
-        <!-- Alternative Kontaktmöglichkeiten -->
-        <div class="alternative-contact">
-            <h3>📧 Alternative Kontaktmöglichkeiten</h3>
-            <p>Du kannst uns auch direkt per E-Mail erreichen:</p>
-
-            <div class="contact-options">
-                <div class="contact-option">
-                    <h4>📬 Direkter E-Mail-Kontakt</h4>
-                    <p>Sende uns eine E-Mail an:</p>
-                    <a href="mailto:feedback@watchkido.de?subject=Feedback zur YummyGo App" class="btn btn-email">
-                        📧 feedback@watchkido.de
-                    </a>
-                </div>
-
-                <div class="contact-option">
-                    <h4>🐙 GitHub Issues</h4>
-                    <p>Melde Bugs oder schlage Features auf GitHub vor:</p>
-                    <a href="https://github.com/Watchkido/KochAPP/issues" target="_blank" class="btn btn-github">
-                        🐛 GitHub Issues öffnen
-                    </a>
-                </div>
-
-                <div class="contact-option">
-                    <h4>💬 Community-Discord</h4>
-                    <p>Tausche dich mit anderen Nutzern aus:</p>
-                    <button class="btn btn-discord" disabled title="Demnächst verfügbar">
-                        💬 Discord beitreten (Coming Soon)
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <hr style="margin: 50px 0; border: 1px solid #ddd;">
 
         <!-- Häufig gewünschte Features -->
         <div class="feature-voting">
@@ -153,7 +144,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Smart Recipe Hub</p>
+            <p>&copy; 2024 YummyGo</p>
             <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a> |
                 <a href="sitemap.html">Sitemap</a></p>
         </div>

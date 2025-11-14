@@ -55,10 +55,31 @@
     </aside>
 
     <header>
-        <div class="container">
-            <h1>YummyGo</h1>
-            <p class="tagline">Kochen leicht gemacht – in 5 Minuten zum passenden Rezept!</p>
+        <div class="header-flex">
+            <img src="images/weisses_logo.png" alt="Logo" class="logo" id="mainLogo">
+            <div class="header-center">
+                <h1>YummyGo</h1>
+                <p class="tagline">Kochen leicht gemacht – in 5 Minuten zum passenden Rezept!</p>
+            </div>
         </div>
+    <style>
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            left: 0;
+            height: 180px;
+            margin-left: 20px;
+        }
+        .header-center {
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
     </header>
 
     <nav>
@@ -89,7 +110,7 @@
         <section style="background: white; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
             <h3>ℹ️ Informationen</h3>
             <ul style="line-height: 2; margin-left: 2rem;">
-                <li><a href="team.html">Über uns / Team</a> - Unser Team und Mission</li>
+
                 <li><a href="kontakt.html">Kontakt</a> - Kontaktformular und Ansprechpartner</li>
                 <li><a href="faq.html">FAQ / Hilfe</a> - Häufig gestellte Fragen</li>
                 <li><a href="tutorial.html">Tutorial</a> - Schritt-für-Schritt Anleitung</li>
@@ -101,9 +122,7 @@
             <ul style="line-height: 2; margin-left: 2rem;">
                 <li><a href="export.html">Rezepte exportieren</a> - Download als JSON/CSV</li>
                 <li><a href="feedback.html">Feedback</a> - Ihre Meinung ist uns wichtig</li>
-                <li><a href="changelog.html">Changelog</a> - Neue Features und Updates</li>
-                <li><a href="community.html">Community</a> - Austausch mit anderen Nutzern</li>
-                <li><a href="app.html">Mobile App</a> - App-Download und mobile Nutzung</li>
+
             </ul>
         </section>
 
@@ -117,23 +136,6 @@
             </ul>
         </section>
 
-        <section style="background: white; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
-            <h3>🔗 Externe Links</h3>
-            <ul style="line-height: 2; margin-left: 2rem;">
-                <li><a href="https://kanban.multi-channel-network.de/" target="_blank" rel="noopener">Kanbanboard</a> - Projektmanagement</li>
-                <li><a href="https://dataanalyst.stadtwettkampf.de/" target="_blank" rel="noopener">Stadtwettkampf der Datenanalysten</a></li>
-                <li><a href="https://github.com/Watchkido/KochAPP" target="_blank" rel="noopener">GitHub Repository</a> - Quellcode und Entwicklung</li>
-            </ul>
-        </section>
-
-        <section style="background: white; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
-            <h3>🛠️ Entwickler / Testseiten</h3>
-            <ul style="line-height: 2; margin-left: 2rem;">
-                <li><a href="test-db.html">Datenbank testen</a> - Datenbank-Inhalte anzeigen</li>
-                <li><a href="reset-db.html">Datenbank zurücksetzen</a> - LocalStorage leeren</li>
-                <li><a href="update-images.html">Bilder aktualisieren</a> - Rezeptbilder verwalten</li>
-            </ul>
-        </section>
 
         <section style="background: #e8f5e9; padding: 2rem; border-radius: 8px; border-left: 5px solid #4CAF50;">
             <h3>♿ Barrierefreiheit</h3>

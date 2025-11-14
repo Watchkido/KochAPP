@@ -1,6 +1,6 @@
 /**
  * script.js
- * UI- und Rezeptlogik für Smart Recipe Hub.
+ * UI- und Rezeptlogik für YummyGo.
  * Entwicklerhinweis: Hier werden alle Interaktionen und die Anzeige der Rezepte gesteuert.
  */
 // Gemeinsame Funktionen für alle Seiten
@@ -18,7 +18,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Lädt die vorgestellten Rezepte auf der Startseite
 async function loadFeaturedRecipes() {
-    const recipes = getAllRecipes().slice(0, 3); // Erste 3 Rezepte
+    let allRecipes = getAllRecipes();
+    // Rezepte mischen (Fisher-Yates)
+    for (let i = allRecipes.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [allRecipes[i], allRecipes[j]] = [allRecipes[j], allRecipes[i]];
+    }
+    const recipes = allRecipes.slice(0, 3); // 3 zufällige Rezepte
     
     const container = document.getElementById('featured-recipes-list');
     if (!container) return;
@@ -145,7 +151,15 @@ function setupRecipeForm() {
 
 // Lädt alle Rezepte auf der Rezepte-Seite
 async function loadAllRecipes() {
-    const recipes = getAllRecipes();
+    let recipes = getAllRecipes();
+    // Filter aus URL auslesen
+    const params = new URLSearchParams(window.location.search);
+    const filter = params.get('filter');
+    if (filter === 'vegan') {
+        recipes = recipes.filter(r => (r.description || '').toLowerCase().includes('vegan'));
+    } else if (filter === 'vegetarisch') {
+        recipes = recipes.filter(r => (r.description || '').toLowerCase().includes('vegetarisch'));
+    }
     
     const container = document.getElementById('all-recipes-list');
     if (!container) return;
@@ -301,7 +315,7 @@ async function loadRecipeDetail(recipeId) {
 document.addEventListener('DOMContentLoaded', async function() {
     // Datenbank initialisieren
     await initDatabase();
-    
+
     // Seiten-spezifische Initialisierung
     if (document.getElementById('add-recipe-form')) {
         setupRecipeForm();
@@ -310,12 +324,25 @@ document.addEventListener('DOMContentLoaded', async function() {
     if (document.getElementById('all-recipes-list')) {
         await loadAllRecipes();
         setupSearch();
+        // Zufallsrezept-Button
+        const randomBtn = document.getElementById('randomRecipeBtn');
+        if (randomBtn) {
+            randomBtn.addEventListener('click', function() {
+                const recipes = getAllRecipes();
+                if (recipes.length === 0) return;
+                const randomIndex = Math.floor(Math.random() * recipes.length);
+                const recipe = recipes[randomIndex];
+                if (recipe && recipe.id) {
+                    window.location.href = `recipe-detail.html?id=${recipe.id}`;
+                }
+            });
+        }
     }
 
     if (document.getElementById('favorites-list')) {
         await loadFavorites();
     }
-    
+
     // Startseite
     if (document.getElementById('featured-recipes-list')) {
         await loadFeaturedRecipes();

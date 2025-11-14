@@ -1,4 +1,4 @@
-# Smart Recipe Hub - AI Coding Agent Instructions
+# YummyGo - AI Coding Agent Instructions
 
 ## Project Architecture
 

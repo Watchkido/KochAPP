@@ -1,6 +1,6 @@
 /**
  * feedback.js
- * Feedback- und Voting-Logik für Smart Recipe Hub.
+ * Feedback- und Voting-Logik für YummyGo.
  * Entwicklerhinweis: Hier werden Formularverarbeitung, Mailto und Feature-Voting umgesetzt.
  */
 // Feedback-Formular JavaScript
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         return `
-Smart Recipe Hub - Feedback
+YummyGo - Feedback
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

@@ -1,9 +1,9 @@
-# 📁 Datei-Dokumentation - Smart Recipe Hub
+# 📁 Datei-Dokumentation - YummyGo
 
 **Stand:** November 2025  
 **Version:** Koch_App_2 (Produktionsversion)
 
-Diese Dokumentation beschreibt **alle Dateien** des Smart Recipe Hub und ihre Funktion im System.
+Diese Dokumentation beschreibt **alle Dateien** des YummyGo und ihre Funktion im System.
 
 ---
 
@@ -670,5 +670,5 @@ Bei Fragen zur Code-Struktur:
 ---
 
 **Letzte Aktualisierung:** 11. November 2025  
-**Autor:** Smart Recipe Hub Team  
+**Autor:** YummyGo Team  
 **GitHub:** [https://github.com/Watchkido/KochAPP](https://github.com/Watchkido/KochAPP)

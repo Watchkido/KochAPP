@@ -1,12 +1,12 @@
-# 🎯 Mini-Marketingstrategie für den Smart Recipe HubMini-Marketingstrategie für den Smart Recipe Hub
+# 🎯 Mini-Marketingstrategie für den YummyGoMini-Marketingstrategie für den YummyGo
 
-Der Smart Recipe Hub ist als die digitale Anlaufstelle für schnelle, gesunde und inspirierende Rezepte positioniert. Das primäre Ziel ist es, dass Nutzer:innen in weniger als 5 Minuten ein passendes Rezept finden, es speichern oder teilen können und sich beim Kochen unterstützt fühlen.
+Der YummyGo ist als die digitale Anlaufstelle für schnelle, gesunde und inspirierende Rezepte positioniert. Das primäre Ziel ist es, dass Nutzer:innen in weniger als 5 Minuten ein passendes Rezept finden, es speichern oder teilen können und sich beim Kochen unterstützt fühlen.
 
 > **Vision:** Die digitale Anlaufstelle für schnelle, gesunde und inspirierende RezepteI. Zielgruppenfokus (Target Group)
 
 Die Kommunikation zielt auf spezifische Gruppen ab, die Wert auf Geschwindigkeit und Einfachheit legen:
 
-Der Smart Recipe Hub ist als die digitale Anlaufstelle für **schnelle, gesunde und inspirierende Rezepte** positioniert. Das primäre Ziel ist es, dass Nutzer:innen in **weniger als 5 Minuten** ein passendes Rezept finden, es speichern oder teilen können und sich beim Kochen unterstützt fühlen.1. Studierende: Diese suchen vor allem nach günstigen und schnellen Rezepten für den Uni-Alltag.
+Der YummyGo ist als die digitale Anlaufstelle für **schnelle, gesunde und inspirierende Rezepte** positioniert. Das primäre Ziel ist es, dass Nutzer:innen in **weniger als 5 Minuten** ein passendes Rezept finden, es speichern oder teilen können und sich beim Kochen unterstützt fühlen.1. Studierende: Diese suchen vor allem nach günstigen und schnellen Rezepten für den Uni-Alltag.
 
 2. Berufstätige: Diese benötigen unkomplizierte Rezepte für gesunde Mahlzeiten, die sie nach Feierabend zubereiten können.
 
@@ -222,4 +222,4 @@ Kontaktiere uns über [kontakt.html](../Koch_App_2/kontakt.html) oder [feedback.
 
 **Stand:** November 2025  
 **Version:** 1.0  
-**Autor:** Smart Recipe Hub Marketing-Team
+**Autor:** YummyGo Marketing-Team

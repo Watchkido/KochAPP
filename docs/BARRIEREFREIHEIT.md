@@ -2,7 +2,7 @@
 
 ## ♿ Übersicht
 
-Die Website Smart Recipe Hub erfüllt die Anforderungen der **BITV 2.0** (Barrierefreie-Informationstechnik-Verordnung) und **WCAG 2.1 Level AA** (Web Content Accessibility Guidelines).
+Die Website YummyGo erfüllt die Anforderungen der **BITV 2.0** (Barrierefreie-Informationstechnik-Verordnung) und **WCAG 2.1 Level AA** (Web Content Accessibility Guidelines).
 
 ## 🎯 Implementierte Features
 

@@ -1,6 +1,6 @@
 <!--
     faq.html
-    FAQ und Hilfeseite für Smart Recipe Hub.
+    FAQ und Hilfeseite für YummyGo.
     Entwicklerhinweis: Fragen und Antworten bitte aktuell halten.
 -->
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ / Hilfe - Smart Recipe Hub</title>
+    <title>FAQ / Hilfe - YummyGo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="accessibility.css">
     <script src="accessibility.js"></script>
@@ -54,10 +54,31 @@
     </aside>
 
     <header>
-        <div class="container">
-            <h1>Smart Recipe Hub</h1>
-            <p class="tagline">Kochen leicht gemacht – in 5 Minuten zum passenden Rezept!</p>
+        <div class="header-flex">
+            <img src="images/weisses_logo.png" alt="Logo" class="logo" id="mainLogo">
+            <div class="header-center">
+                <h1>YummyGo</h1>
+                <p class="tagline">Kochen leicht gemacht – in 5 Minuten zum passenden Rezept!</p>
+            </div>
         </div>
+    <style>
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            left: 0;
+            height: 180px;
+            margin-left: 20px;
+        }
+        .header-center {
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
     </header>
 
     <nav>
@@ -75,31 +96,93 @@
         <h2>FAQ / Hilfe</h2>
         <p style="color: #666; font-style: italic;">Hier findest du Antworten auf die häufigsten Fragen zur Nutzung der App.</p>
 
-        <section style="background: #fff; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
-            <h3>1. Wie werden meine Rezepte gespeichert?</h3>
-            <p>Alle Rezepte werden lokal in deinem Browser gespeichert. Es ist kein Server und keine Registrierung notwendig – deine Daten bleiben privat!</p>
-        </section>
-        <section style="background: #fff; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
-            <h3>2. Kann ich meine Rezepte exportieren oder sichern?</h3>
-            <p>Ja! Über die Seite <a href="export.html">Rezepte exportieren</a> kannst du deine Sammlung als PDF oder JSON-Datei herunterladen und später wieder importieren.</p>
-        </section>
-        <section style="background: #fff; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
-            <h3>3. Wie kann ich Rezepte als Favoriten markieren?</h3>
-            <p>Klicke einfach auf das Herz-Symbol ❤️ bei einem Rezept. Deine Favoriten findest du gesammelt auf der <a href="favorites.html">Favoriten</a>-Seite.</p>
-        </section>
-        <section style="background: #fff; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
-            <h3>4. Wie kann ich Feedback geben oder neue Funktionen vorschlagen?</h3>
-            <p>Nutze die <a href="feedback.html">Feedback</a>-Seite, um uns direkt Rückmeldungen zu schicken oder für neue Features abzustimmen.</p>
-        </section>
-        <section style="background: #fff; padding: 2rem; border-radius: 8px;">
-            <h3>5. Funktioniert die App auch auf dem Smartphone?</h3>
-            <p>Ja, die App ist komplett responsive und für mobile Geräte optimiert. Du kannst sie bequem auf Smartphone, Tablet und PC nutzen.</p>
-        </section>
+        <div class="faq-list">
+            <details>
+                <summary>Wie werden meine Rezepte gespeichert?</summary>
+                <div class="faq-answer">Alle Rezepte werden lokal in deinem Browser gespeichert. Es ist kein Server und keine Registrierung notwendig – deine Daten bleiben privat!</div>
+            </details>
+            <details>
+                <summary>Kann ich meine Rezepte exportieren oder sichern?</summary>
+                <div class="faq-answer">Ja! Über die Seite <a href="export.html">Rezepte exportieren</a> kannst du deine Sammlung als PDF oder JSON-Datei herunterladen und später wieder importieren.</div>
+            </details>
+            <details>
+                <summary>Wie kann ich Rezepte als Favoriten markieren?</summary>
+                <div class="faq-answer">Klicke einfach auf das Herz-Symbol ❤️ bei einem Rezept. Deine Favoriten findest du gesammelt auf der <a href="favorites.html">Favoriten</a>-Seite.</div>
+            </details>
+            <details>
+                <summary>Wie kann ich Feedback geben oder neue Funktionen vorschlagen?</summary>
+                <div class="faq-answer">Nutze die <a href="feedback.html">Feedback</a>-Seite, um uns direkt Rückmeldungen zu schicken oder für neue Features abzustimmen.</div>
+            </details>
+            <details>
+                <summary>Funktioniert die App auch auf dem Smartphone?</summary>
+                <div class="faq-answer">Ja, die App ist komplett responsive und für mobile Geräte optimiert. Du kannst sie bequem auf Smartphone, Tablet und PC nutzen.</div>
+            </details>
+            <details>
+                <summary>Wie kann ich ein Rezept bearbeiten?</summary>
+                <div class="faq-answer">Klicke auf das gewünschte Rezept und wähle „Bearbeiten“. Du kannst alle Felder anpassen und die Änderungen speichern.</div>
+            </details>
+            <details>
+                <summary>Kann ich Rezepte löschen?</summary>
+                <div class="faq-answer">Ja, in der Detailansicht eines Rezepts findest du die Option „Löschen“. Nach Bestätigung wird das Rezept entfernt.</div>
+            </details>
+            <details>
+                <summary>Wie funktioniert die Suchfunktion?</summary>
+                <div class="faq-answer">Gib einen Suchbegriff ein und die Ergebnisse werden automatisch gefiltert. Es wird in Titel, Beschreibung und Zutaten gesucht.</div>
+            </details>
+            <details>
+                <summary>Was bedeutet „Favorit“?</summary>
+                <div class="faq-answer">Favoriten sind Rezepte, die du besonders magst. Sie werden mit einem Herz markiert und sind auf der Favoriten-Seite gesammelt.</div>
+            </details>
+            <details>
+                <summary>Kann ich die App offline nutzen?</summary>
+                <div class="faq-answer">Ja, alle Funktionen sind auch ohne Internet verfügbar, da die Daten lokal im Browser gespeichert werden.</div>
+            </details>
+            <details>
+                <summary>Wie kann ich die Datenbank zurücksetzen?</summary>
+                <div class="faq-answer">Nutze die Seite „Datenbank zurücksetzen“, um alle Rezepte zu löschen und die Demo-Daten wiederherzustellen.</div>
+            </details>
+            <details>
+                <summary>Kann ich Bilder zu meinen Rezepten hinzufügen?</summary>
+                <div class="faq-answer">Ja, gib einfach eine Bild-URL im Rezeptformular an. Das Bild wird dann in der Rezeptkarte angezeigt.</div>
+            </details>
+            <details>
+                <summary>Wie werden Kalorien berechnet?</summary>
+                <div class="faq-answer">Die Kalorienangabe ist optional und muss manuell eingetragen werden. Es erfolgt keine automatische Berechnung.</div>
+            </details>
+            <details>
+                <summary>Was passiert bei einem Browser-Update?</summary>
+                <div class="faq-answer">Die Daten bleiben erhalten, solange der LocalStorage nicht gelöscht wird. Ein Update des Browsers hat keinen Einfluss auf die Rezepte.</div>
+            </details>
+            <details>
+                <summary>Wie kann ich die App auf dem Homescreen speichern?</summary>
+                <div class="faq-answer">Auf dem Smartphone kannst du die App über das Browser-Menü zum Homescreen hinzufügen und wie eine normale App nutzen.</div>
+            </details>
+            <details>
+                <summary>Gibt es eine Community-Funktion?</summary>
+                <div class="faq-answer">Ja, über die Community-Seite kannst du Rezepte teilen und dich mit anderen Nutzern austauschen.</div>
+            </details>
+            <details>
+                <summary>Wie kann ich die Sprache der App ändern?</summary>
+                <div class="faq-answer">Aktuell ist die App nur auf Deutsch verfügbar. Eine Mehrsprachigkeit ist für zukünftige Versionen geplant.</div>
+            </details>
+            <details>
+                <summary>Wer entwickelt YummyGo?</summary>
+                <div class="faq-answer">Das Projekt wird von einem agilen Team entwickelt und ist Open Source. Mehr Infos findest du auf der Team-Seite.</div>
+            </details>
+            <details>
+                <summary>Wie sicher sind meine Daten?</summary>
+                <div class="faq-answer">Alle Daten bleiben ausschließlich auf deinem Gerät und werden nicht an Dritte weitergegeben.</div>
+            </details>
+            <details>
+                <summary>Kann ich Rezepte exportieren und auf einem anderen Gerät importieren?</summary>
+                <div class="faq-answer">Ja, exportiere deine Rezepte als JSON und importiere sie auf einem anderen Gerät über die Import-Funktion.</div>
+            </details>
+        </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Smart Recipe Hub. Ein agiles Projekt umgesetzt mit Scrum.</p>
+            <p>&copy; 2024 YummyGo. Ein agiles Projekt umgesetzt mit Scrum.</p>
             <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a> |
                 <a href="sitemap.html">Sitemap</a></p>
         </div>

@@ -1,11 +1,11 @@
 <!--
     export.html
-    Export- und Sharing-Seite für Smart Recipe Hub.
+    Export- und Sharing-Seite für YummyGo.
     Entwicklerhinweis: Hier werden PDF-Export, Social Sharing und Daten-Backup angeboten.
 -->
 <!DOCTYPE html>
 <html lang="de">
-<head><meta charset="UTF-8"><title>Rezepte exportieren - Smart Recipe Hub</title><link rel="stylesheet" href="style.css">
+<head><meta charset="UTF-8"><title>Rezepte exportieren - YummyGo</title><link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="accessibility.css"><script src="accessibility.js"></script>
     <script src="sidebar.js"></script></head>
 <body>
@@ -16,7 +16,33 @@
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
 <aside class="sidebar" id="sidebar"><h3>Navigation</h3><ul><li><a href="index.html">🏠 Startseite</a></li><li><a href="recipes.html">📖 Alle Rezepte</a></li><li><a href="add-recipe.html">➕ Rezept hinzufügen</a></li><li><a href="favorites.html">❤️ Favoriten</a></li></ul><h3 style="margin-top: 30px;">Informationen</h3><ul><li><a href="team.html">👥 Über uns / Team</a></li><li><a href="kontakt.html">📧 Kontakt</a></li><li><a href="faq.html">❓ FAQ / Hilfe</a></li><li><a href="tutorial.html">📚 Tutorial</a></li></ul><h3 style="margin-top: 30px;">Weitere Funktionen</h3><ul><li><a href="export.html" class="active">📄 Rezepte exportieren</a></li><li><a href="feedback.html">💬 Feedback</a></li><li><a href="changelog.html">🆕 Changelog</a></li><li><a href="community.html">👨‍👩‍👧‍👦 Community</a></li><li><a href="app.html">📱 Mobile App</a></li></ul><h3 style="margin-top: 30px;">Externe Links</h3><ul><li><a href="https://kanban.multi-channel-network.de/" target="_blank">📋 Kanbanboard</a></li><li><a href="https://dataanalyst.stadtwettkampf.de/" target="_blank">🏆 Stadtwettkampf</a></li><li><a href="https://watchkido.github.io/KochAPP/" target="_blank">💻 GitHub</a></li></ul><h3 style="margin-top: 30px;">Rechtliches</h3><ul><li><a href="impressum.html">ℹ️ Impressum</a></li><li><a href="datenschutz.html">🔒 Datenschutz</a></li><li><a href="agb.html">📜 AGB</a></li></ul></aside>
-<header><div class="container"><h1>Smart Recipe Hub</h1><p class="tagline">Kochen leicht gemacht</p></div></header>
+<header>
+        <div class="header-flex">
+            <img src="images/weisses_logo.png" alt="Logo" class="logo" id="mainLogo">
+            <div class="header-center">
+                <h1>YummyGo</h1>
+                <p class="tagline">Kochen leicht gemacht – in 5 Minuten zum passenden Rezept!</p>
+            </div>
+        </div>
+    <style>
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            left: 0;
+            height: 180px;
+            margin-left: 20px;
+        }
+        .header-center {
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
+    </header>
 <nav><div class="container"><ul><li><a href="index.html">Startseite</a></li><li><a href="recipes.html">Alle Rezepte</a></li><li><a href="add-recipe.html">Rezept hinzufügen</a></li><li><a href="favorites.html">Favoriten</a></li></ul></div></nav>
 <main class="container" id="main-content">
         <h2>📤 Rezepte exportieren & teilen</h2>
@@ -28,9 +54,6 @@
             <div class="button-group">
                 <button class="btn btn-primary" onclick="exportAllRecipesAsPDF()">
                     📥 Alle Rezepte als PDF
-                </button>
-                <button class="btn" onclick="exportFavoritesAsPDF()">
-                    ❤️ Nur Favoriten als PDF
                 </button>
             </div>
         </div>
@@ -89,7 +112,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Smart Recipe Hub</p>
+            <p>&copy; 2024 YummyGo</p>
             <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a> |
                 <a href="sitemap.html">Sitemap</a></p>
         </div>

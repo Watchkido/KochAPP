@@ -1,8 +1,8 @@
-# Smart Recipe Hub 🍳
+# YummyGo 🍳
 
 > **Die intelligente Rezept-Plattform für moderne Köche**
 
-![Smart Recipe Hub Screenshot](Koch_App_2/images/Screenshot.png)
+![YummyGo Screenshot](Koch_App_2/images/Screenshot.png)
 
 ---
 
@@ -18,6 +18,54 @@
 
 ---
 
+# Wichtige Änderungen (Stand November 2025)
+
+---
+
+## Neue Features & Bugfixes
+
+- **PDF-Export:**
+  - Emojis und Sonderzeichen werden in der PDF-Ausgabe automatisch durch Klartext ersetzt (z.B. „Kategorie:“ statt „📁 Kategorie:“), um Darstellungsprobleme zu vermeiden.
+  - Die PDF-Ausgabe ist jetzt rein deutsch/ASCII und kompatibel mit allen PDF-Viewern.
+  - Der Button „Nur Favoriten als PDF“ wurde entfernt, Export ist nur noch für alle Rezepte möglich.
+
+- **Sidebar & Navigation:**
+  - Sidebar-Links und Navigation wurden aktualisiert (Changelog-Link entfernt, FAQ/Kontakt/Impressum ergänzt).
+  - FAQ- und Kontaktseiten enthalten realistische Beispielinhalte und Formulare.
+  - Impressum und Datenschutz mit Musterdaten gefüllt.
+
+- **Barrierefreiheit & Usability:**
+  - Meta-Tag für UTF-8 in allen HTML-Dateien gesetzt.
+  - Screenreader- und Tastatur-Navigation verbessert.
+
+- **Datenbank & Rezepte:**
+  - Alle Rezepte werden lokal im Browser gespeichert (SQL.js + LocalStorage).
+  - Test- und Reset-Seiten für die Datenbank verfügbar.
+
+---
+
+## Hinweise zur PDF-Ausgabe
+
+- Die PDF-Funktion exportiert Rezepte ausschließlich mit Klartext (keine Emojis/Sonderzeichen).
+- Für korrekte Darstellung bitte nur deutsche/ASCII-Zeichen in Rezeptdaten verwenden.
+- Die PDF-Generierung erfolgt komplett clientseitig, keine Daten werden übertragen.
+
+---
+
+## Letzte Seitenstruktur
+
+- **Export:** Rezepte als PDF/JSON exportieren, Datenbank sichern
+- **FAQ:** Häufige Fragen zur App
+- **Kontakt:** Kontaktformular und Beispiel-Daten
+- **Impressum/Datenschutz/AGB:** Rechtliche Informationen
+- **Sidebar:** Navigation zu allen Haupt- und Infoseiten, externe Links
+
+---
+
+Weitere Details siehe Quellcode und Einzeldateien im Ordner `Koch_App_2/`.
+
+---
+
 ## 🎯 Produktvision
 
 ### Problemstellung
@@ -27,9 +75,9 @@ In unserer schnelllebigen Zeit fehlt vielen Menschen die Zeit und Inspiration f�
 - 🤔 Schwierige Auswahl bei tausenden Rezepten
 - 📚 Unübersichtliche Rezeptsammlungen
 
-### Unsere Lösung: Smart Recipe Hub
+### Unsere Lösung: YummyGo
 
-Der **Smart Recipe Hub** ist die digitale Anlaufstelle für **schnelle, gesunde und inspirierende Rezepte**.
+Der **YummyGo** ist die digitale Anlaufstelle für **schnelle, gesunde und inspirierende Rezepte**.
 
 #### Kernwerte
 - **Geschwindigkeit:** In unter 5 Minuten zum passenden Rezept
@@ -870,7 +918,7 @@ Items
    Sprint 1  2  3  4
 ```
 
-### Vorteile von Scrum für Smart Recipe Hub
+### Vorteile von Scrum für YummyGo
 
 | Vorteil | Konkrete Auswirkung im Projekt |
 |---------|-------------------------------|
@@ -924,4 +972,4 @@ Scrum funktioniert wie ein **gut eingeübter Rugby-Spielzug**:
 
 ## 📄 Lizenz & Copyright
 
-© 2024 Smart Recipe Hub. Ein agiles Projekt umgesetzt mit Scrum.
+© 2025 YummyGo. Ein agiles Projekt umgesetzt mit Scrum.

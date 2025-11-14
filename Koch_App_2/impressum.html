@@ -1,6 +1,6 @@
 <!--
     impressum.html
-    Impressum für Smart Recipe Hub.
+    Impressum für YummyGo.
     Entwicklerhinweis: Rechtstexte bitte nur nach Rücksprache ändern.
 -->
 <!DOCTYPE html>
@@ -24,15 +24,27 @@
     <!-- Overlay -->
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
     
-       <!-- Sidebar Navigation -->
+     <!-- Sidebar Navigation -->
     <aside class="sidebar" id="sidebar">
         <h3>Navigation</h3>
         <ul>
             <li><a href="index.html" class="active">🏠 Startseite</a></li>
             <li><a href="recipes.html">📖 Alle Rezepte</a></li>
+            <li><a href="add-recipe.html">➕ Rezept hinzufügen</a></li>
             <li><a href="favorites.html">❤️ Favoriten</a></li>
         </ul>
+        <h3 style="margin-top: 30px;">Informationen</h3>
+        <ul>
 
+            <li><a href="kontakt.html">📧 Kontakt</a></li>
+            <li><a href="faq.html">❓ FAQ / Hilfe</a></li>
+            <li><a href="tutorial.html">📚 Tutorial</a></li>
+        </ul>
+        <h3 style="margin-top: 30px;">Weitere Funktionen</h3>
+        <ul>
+            <li><a href="export.html">📄 Rezepte exportieren</a></li>
+            <li><a href="feedback.html">💬 Feedback</a></li>
+        </ul>
         <h3 style="margin-top: 30px;">Rechtliches</h3>
         <ul>
             <li><a href="impressum.html">ℹ️ Impressum</a></li>
@@ -41,11 +53,33 @@
         </ul>
     </aside>
 
+
     <header>
-        <div class="container">
-            <h1>YummyGo</h1>
-            <p class="tagline">Kochen leicht gemacht – in 5 Minuten zum passenden Rezept!</p>
+        <div class="header-flex">
+            <img src="images/weisses_logo.png" alt="Logo" class="logo" id="mainLogo">
+            <div class="header-center">
+                <h1>YummyGo</h1>
+                <p class="tagline">Kochen leicht gemacht – in 5 Minuten zum passenden Rezept!</p>
+            </div>
         </div>
+    <style>
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            left: 0;
+            height: 180px;
+            margin-left: 20px;
+        }
+        .header-center {
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
     </header>
 
     <nav>
@@ -112,7 +146,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Smart Recipe Hub. Ein agiles Projekt umgesetzt mit Scrum.</p>
+            <p>&copy; 2024 YummyGo. Ein agiles Projekt umgesetzt mit Scrum.</p>
             <p>
                 <a href="impressum.html">Impressum</a> | 
                 <a href="datenschutz.html">Datenschutz</a> |

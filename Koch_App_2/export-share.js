@@ -1,7 +1,7 @@
-// Export & Share Funktionen für Smart Recipe Hub
+// Export & Share Funktionen für YummyGo
 /**
  * export-share.js
- * Export- und Sharing-Funktionen für Smart Recipe Hub.
+ * Export- und Sharing-Funktionen für YummyGo.
  * Entwicklerhinweis: Hier werden PDF-Export, Social Sharing und Daten-Backup umgesetzt.
  */
 let selectedRecipe = null;
@@ -81,14 +81,14 @@ async function generateRecipesPDF(recipes, filename) {
         // Titel
         doc.setFontSize(20);
         doc.setFont(undefined, 'bold');
-        doc.text('Smart Recipe Hub', margin, yPosition);
+        doc.text('YummyGo', margin, yPosition);
         yPosition += 10;
-        
+
         doc.setFontSize(12);
         doc.setFont(undefined, 'normal');
-        doc.text(`${recipes.length} Rezept(e) - Exportiert am ${new Date().toLocaleDateString('de-DE')}`, margin, yPosition);
+        doc.text(`${recipes.length} Rezepte - Exportiert am ${new Date().toLocaleDateString('de-DE')}`, margin, yPosition);
         yPosition += 15;
-        
+
         // Rezepte durchgehen
         recipes.forEach((recipe, index) => {
             // Neue Seite wenn nötig
@@ -96,13 +96,13 @@ async function generateRecipesPDF(recipes, filename) {
                 doc.addPage();
                 yPosition = 20;
             }
-            
+
             // Rezept-Nummer und Titel
             doc.setFontSize(16);
             doc.setFont(undefined, 'bold');
             doc.text(`${index + 1}. ${recipe.title}`, margin, yPosition);
             yPosition += lineHeight + 2;
-            
+
             // Beschreibung
             doc.setFontSize(10);
             doc.setFont(undefined, 'italic');
@@ -116,39 +116,39 @@ async function generateRecipesPDF(recipes, filename) {
                 yPosition += lineHeight;
             });
             yPosition += 3;
-            
-            // Infos (Kategorie, Zeit, Kalorien)
+
+            // Infos (Kategorie, Zeit, Kalorien) - ohne Emojis
             doc.setFont(undefined, 'normal');
-            doc.text(`📁 Kategorie: ${recipe.category || 'Keine'}`, margin, yPosition);
+            doc.text(`Kategorie: ${recipe.category || 'Keine'}`, margin, yPosition);
             yPosition += lineHeight;
-            doc.text(`⏱️ Zubereitungszeit: ${recipe.preparation_time || '?'} Min`, margin, yPosition);
+            doc.text(`Zubereitungszeit: ${recipe.preparation_time || '?'} Min`, margin, yPosition);
             yPosition += lineHeight;
-            doc.text(`🔥 Kalorien: ${recipe.calories || '?'} kcal`, margin, yPosition);
+            doc.text(`Kalorien: ${recipe.calories || '?'} kcal`, margin, yPosition);
             yPosition += lineHeight + 2;
-            
+
             // Zutaten
             doc.setFont(undefined, 'bold');
             doc.text('Zutaten:', margin, yPosition);
             yPosition += lineHeight;
             doc.setFont(undefined, 'normal');
-            
+
             const ingredients = recipe.ingredients ? recipe.ingredients.split('\n') : [];
             ingredients.forEach(ingredient => {
                 if (yPosition > pageHeight - 40) {
                     doc.addPage();
                     yPosition = 20;
                 }
-                doc.text(`• ${ingredient.trim()}`, margin + 5, yPosition);
+                doc.text(`- ${ingredient.trim()}`, margin + 5, yPosition);
                 yPosition += lineHeight;
             });
             yPosition += 2;
-            
+
             // Anleitung
             doc.setFont(undefined, 'bold');
             doc.text('Zubereitung:', margin, yPosition);
             yPosition += lineHeight;
             doc.setFont(undefined, 'normal');
-            
+
             const instructions = recipe.instructions ? recipe.instructions.split('\n') : [];
             instructions.forEach((step, idx) => {
                 if (yPosition > pageHeight - 40) {
@@ -165,7 +165,7 @@ async function generateRecipesPDF(recipes, filename) {
                     yPosition += lineHeight;
                 });
             });
-            
+
             // Trennlinie
             yPosition += 5;
             doc.setDrawColor(200, 200, 200);
@@ -202,7 +202,7 @@ function shareOnFacebook() {
 function shareOnTwitter() {
     if (!selectedRecipe) return;
     
-    const text = encodeURIComponent(`${selectedRecipe.title} - Smart Recipe Hub`);
+    const text = encodeURIComponent(`${selectedRecipe.title} - YummyGo`);
     const url = encodeURIComponent(getRecipeURL());
     const shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
     window.open(shareUrl, '_blank', 'width=600,height=400');

@@ -2,11 +2,11 @@
 
 Quiz: Kurzfragen
 
-> **Praxisbeispiel:** Smart Recipe HubBeantworten Sie die folgenden zehn Fragen in jeweils zwei bis drei Sätzen, basierend auf den bereitgestellten Quellentexten.
+> **Praxisbeispiel:** YummyGoBeantworten Sie die folgenden zehn Fragen in jeweils zwei bis drei Sätzen, basierend auf den bereitgestellten Quellentexten.
 
 1. Was sind die wesentlichen Unterschiede zwischen klassischem und agilem Projektmanagement in Bezug auf Planung und Flexibilität?
 
-Dieser Leitfaden begleitet Sie durch die wichtigsten Konzepte des agilen Projektmanagements mit Scrum und nutzt den **Smart Recipe Hub** als praktisches Anwendungsbeispiel.2. Beschreiben Sie die Rolle und die Hauptverantwortlichkeiten des Product Owners im Scrum-Framework.
+Dieser Leitfaden begleitet Sie durch die wichtigsten Konzepte des agilen Projektmanagements mit Scrum und nutzt den **YummyGo** als praktisches Anwendungsbeispiel.2. Beschreiben Sie die Rolle und die Hauptverantwortlichkeiten des Product Owners im Scrum-Framework.
 
 3. Was ist das Ziel des Daily Scrum und welche drei zentralen Fragen werden dort vom Entwicklungsteam beantwortet?
 
@@ -14,15 +14,15 @@ Dieser Leitfaden begleitet Sie durch die wichtigsten Konzepte des agilen Projekt
 
 5. Was versteht man unter der "Definition of Ready" (DoR) und welche Kriterien muss eine User Story erfüllen, um diesen Status zu erreichen?
 
-## 📝 Quiz: Kurzfragen6. Beschreiben Sie die technische Architektur des "Smart Recipe Hub" und erläutern Sie, warum dieser Ansatz gewählt wurde.
+## 📝 Quiz: Kurzfragen6. Beschreiben Sie die technische Architektur des "YummyGo" und erläutern Sie, warum dieser Ansatz gewählt wurde.
 
-7. Nennen Sie drei Kernfunktionen, die im Minimum Viable Product (MVP) des "Smart Recipe Hub" enthalten waren.
+7. Nennen Sie drei Kernfunktionen, die im Minimum Viable Product (MVP) des "YummyGo" enthalten waren.
 
 Beantworten Sie die folgenden zehn Fragen in jeweils **zwei bis drei Sätzen**, basierend auf den bereitgestellten Quellentexten.8. Was sind Story Points und welche Zahlenskala wird typischerweise für die Schätzung im Planning Poker verwendet?
 
 9. Welchen Zweck erfüllt die Sprint Retrospektive und wer nimmt daran teil?
 
-### ❓ Fragen10. Wie realisiert die "Smart Recipe Hub"-Anwendung die dauerhafte Speicherung von Daten ohne ein serverseitiges Backend?
+### ❓ Fragen10. Wie realisiert die "YummyGo"-Anwendung die dauerhafte Speicherung von Daten ohne ein serverseitiges Backend?
 
 --------------------------------------------------------------------------------
 
@@ -38,31 +38,31 @@ Beantworten Sie die folgenden zehn Fragen in jeweils **zwei bis drei Sätzen**, 
 
 5. Die "Definition of Ready" (DoR) legt fest, wann eine User Story bereit ist, vom Product Backlog in den Sprint Backlog übernommen zu werden. Die Kriterien dafür sind: Die Story muss geschätzt, klein genug für einen Sprint, mit Akzeptanzkriterien versehen und von allen Teammitgliedern verstanden worden sein.
 
-4. **Erklären Sie, was eine User Story ist und geben Sie das Standardformat an, in dem sie geschrieben wird.**6. Der "Smart Recipe Hub" ist eine komplett clientseitige Anwendung, die nur HTML, CSS und JavaScript nutzt und ohne serverseitiges Backend auskommt. Die Daten werden über SQL.js (SQLite via WebAssembly) direkt im Browser gespeichert. Dieser Ansatz wurde wegen Vorteilen wie keinen Serverkosten, maximalem Datenschutz, Offline-Fähigkeit und einfachem Deployment gewählt.
+4. **Erklären Sie, was eine User Story ist und geben Sie das Standardformat an, in dem sie geschrieben wird.**6. Der "YummyGo" ist eine komplett clientseitige Anwendung, die nur HTML, CSS und JavaScript nutzt und ohne serverseitiges Backend auskommt. Die Daten werden über SQL.js (SQLite via WebAssembly) direkt im Browser gespeichert. Dieser Ansatz wurde wegen Vorteilen wie keinen Serverkosten, maximalem Datenschutz, Offline-Fähigkeit und einfachem Deployment gewählt.
 
-7. Das MVP des "Smart Recipe Hub" umfasste die folgenden drei Kernfunktionen: 1. Eine Rezeptdarstellung auf der Startseite mit Titeln und Beschreibungen. 2. Eine Detailansicht für Rezepte mit Zutaten, Schritten und Zubereitungszeit. 3. Ein Formular, mit dem Benutzer neue Rezepte hinzufügen können, die dauerhaft gespeichert werden.
+7. Das MVP des "YummyGo" umfasste die folgenden drei Kernfunktionen: 1. Eine Rezeptdarstellung auf der Startseite mit Titeln und Beschreibungen. 2. Eine Detailansicht für Rezepte mit Zutaten, Schritten und Zubereitungszeit. 3. Ein Formular, mit dem Benutzer neue Rezepte hinzufügen können, die dauerhaft gespeichert werden.
 
 5. **Was versteht man unter der "Definition of Ready" (DoR) und welche Kriterien muss eine User Story erfüllen, um diesen Status zu erreichen?**8. Story Points sind eine relative Maßeinheit, um den Umfang und die Komplexität einer User Story zu schätzen. Für die Schätzung im Planning Poker wird typischerweise die Fibonacci-Zahlenreihe (1, 2, 3, 5, 8, 13, ...) verwendet, wobei Stories mit einem Wert über 13 als zu groß für einen Sprint gelten (Epic).
 
 9. Die Sprint Retrospektive dient dazu, den Arbeitsprozess und die Zusammenarbeit im Scrum Team kontinuierlich zu verbessern. Die Teilnehmer sind das Entwicklungsteam und der Scrum Master, der das Meeting moderiert; der Product Owner kann ebenfalls teilnehmen.
 
-6. **Beschreiben Sie die technische Architektur des "Smart Recipe Hub" und erläutern Sie, warum dieser Ansatz gewählt wurde.**10. Die Anwendung nutzt SQL.js, eine Implementierung von SQLite, die mittels WebAssembly direkt im Browser läuft. Die so erstellte Datenbank wird persistent im LocalStorage des Browsers gespeichert, wodurch die Daten auch nach dem Schließen des Fensters erhalten bleiben.
+6. **Beschreiben Sie die technische Architektur des "YummyGo" und erläutern Sie, warum dieser Ansatz gewählt wurde.**10. Die Anwendung nutzt SQL.js, eine Implementierung von SQLite, die mittels WebAssembly direkt im Browser läuft. Die so erstellte Datenbank wird persistent im LocalStorage des Browsers gespeichert, wodurch die Daten auch nach dem Schließen des Fensters erhalten bleiben.
 
 --------------------------------------------------------------------------------
 
-7. **Nennen Sie drei Kernfunktionen, die im Minimum Viable Product (MVP) des "Smart Recipe Hub" enthalten waren.**Essay-Fragen
+7. **Nennen Sie drei Kernfunktionen, die im Minimum Viable Product (MVP) des "YummyGo" enthalten waren.**Essay-Fragen
 
 Formulieren Sie fundierte Antworten auf die folgenden Fragen.
 
-8. **Was sind Story Points und welche Zahlenskala wird typischerweise für die Schätzung im Planning Poker verwendet?**1. Diskutieren Sie, wie die fünf Scrum-Werte (Fokus, Mut, Offenheit, Respekt, Verbindlichkeit) für den Erfolg eines selbstorganisierten Entwicklungsteams, wie es im "Smart Recipe Hub"-Projekt beschrieben wird, unerlässlich sind.
+8. **Was sind Story Points und welche Zahlenskala wird typischerweise für die Schätzung im Planning Poker verwendet?**1. Diskutieren Sie, wie die fünf Scrum-Werte (Fokus, Mut, Offenheit, Respekt, Verbindlichkeit) für den Erfolg eines selbstorganisierten Entwicklungsteams, wie es im "YummyGo"-Projekt beschrieben wird, unerlässlich sind.
 
 2. Vergleichen und kontrastieren Sie das Sprint Review und die Sprint Retrospektive. Erläutern Sie die unterschiedlichen Ziele, Teilnehmer und Ergebnisse beider Ereignisse und begründen Sie, warum beide für den agilen Prozess von entscheidender Bedeutung sind.
 
-9. **Welchen Zweck erfüllt die Sprint Retrospektive und wer nimmt daran teil?**3. Der "Smart Recipe Hub" wurde mit einer reinen clientseitigen Architektur entwickelt. Analysieren Sie die Vorteile und potenziellen Nachteile dieser technischen Entscheidung im Kontext der Produktvision und der definierten Zielgruppen.
+9. **Welchen Zweck erfüllt die Sprint Retrospektive und wer nimmt daran teil?**3. Der "YummyGo" wurde mit einer reinen clientseitigen Architektur entwickelt. Analysieren Sie die Vorteile und potenziellen Nachteile dieser technischen Entscheidung im Kontext der Produktvision und der definierten Zielgruppen.
 
 4. Beschreiben Sie den Weg einer Feature-Idee von der "Produktvision" bis zu einem fertigen "Produktinkrement". Detaillieren Sie dabei die Rollen des Product Owners und des Entwicklungsteams sowie die entscheidenden Scrum-Artefakte und -Ereignisse, die diesen Prozess begleiten.
 
-10. **Wie realisiert die "Smart Recipe Hub"-Anwendung die dauerhafte Speicherung von Daten ohne ein serverseitiges Backend?**5. Erläutern Sie das Konzept eines "dynamischen und lebendigen Artefakts" am Beispiel des Product Backlogs. Diskutieren Sie die im Quelltext genannten Priorisierungsmethoden (z. B. MSCW, Kano-Diagramm, Wert/Risiko-Matrix) und wie sie dem Product Owner helfen, den maximalen Wert zu schaffen.
+10. **Wie realisiert die "YummyGo"-Anwendung die dauerhafte Speicherung von Daten ohne ein serverseitiges Backend?**5. Erläutern Sie das Konzept eines "dynamischen und lebendigen Artefakts" am Beispiel des Product Backlogs. Diskutieren Sie die im Quelltext genannten Priorisierungsmethoden (z. B. MSCW, Kano-Diagramm, Wert/Risiko-Matrix) und wie sie dem Product Owner helfen, den maximalen Wert zu schaffen.
 
 --------------------------------------------------------------------------------
 
@@ -174,11 +174,11 @@ Story Points
 
 User Story
 
-### 6. Technische Architektur des Smart Recipe HubEine Anforderung, formuliert aus der Perspektive eines Nutzers, die beschreibt, welche Funktion er benötigt und welchen Nutzen er sich davon verspricht.
+### 6. Technische Architektur des YummyGoEine Anforderung, formuliert aus der Perspektive eines Nutzers, die beschreibt, welche Funktion er benötigt und welchen Nutzen er sich davon verspricht.
 
 Velocity
 
-Der **Smart Recipe Hub** ist eine komplett **clientseitige Anwendung**, die nur HTML, CSS und JavaScript nutzt und ohne serverseitiges Backend auskommt. Die Daten werden über **SQL.js** (SQLite via WebAssembly) direkt im Browser gespeichert. Eine Metrik, die die Summe der Story Points misst, die ein Team pro Sprint durchschnittlich abschließt. Sie dient der Planung zukünftiger Sprints.
+Der **YummyGo** ist eine komplett **clientseitige Anwendung**, die nur HTML, CSS und JavaScript nutzt und ohne serverseitiges Backend auskommt. Die Daten werden über **SQL.js** (SQLite via WebAssembly) direkt im Browser gespeichert. Eine Metrik, die die Summe der Story Points misst, die ein Team pro Sprint durchschnittlich abschließt. Sie dient der Planung zukünftiger Sprints.
 
 
 **Gründe für diesen Ansatz:**
@@ -191,7 +191,7 @@ Der **Smart Recipe Hub** ist eine komplett **clientseitige Anwendung**, die nur 
 
 ### 7. MVP-Kernfunktionen
 
-Das **MVP des Smart Recipe Hub** umfasste drei Kernfunktionen:
+Das **MVP des YummyGo** umfasste drei Kernfunktionen:
 
 1. 📋 **Rezeptdarstellung** auf der Startseite mit Titeln und Beschreibungen
 2. 🔍 **Detailansicht** für Rezepte mit Zutaten, Schritten und Zubereitungszeit
@@ -237,12 +237,12 @@ Formulieren Sie **fundierte Antworten** auf die folgenden Fragen.
 
 ### 1. Scrum-Werte und Selbstorganisation
 
-> **Thema:** Diskutieren Sie, wie die fünf Scrum-Werte (Fokus, Mut, Offenheit, Respekt, Verbindlichkeit) für den Erfolg eines selbstorganisierten Entwicklungsteams, wie es im "Smart Recipe Hub"-Projekt beschrieben wird, unerlässlich sind.
+> **Thema:** Diskutieren Sie, wie die fünf Scrum-Werte (Fokus, Mut, Offenheit, Respekt, Verbindlichkeit) für den Erfolg eines selbstorganisierten Entwicklungsteams, wie es im "YummyGo"-Projekt beschrieben wird, unerlässlich sind.
 
 **Erwartete Punkte:**
 - Erläuterung der fünf Scrum-Werte
 - Zusammenhang mit Selbstorganisation
-- Praktische Beispiele aus dem Smart Recipe Hub
+- Praktische Beispiele aus dem YummyGo
 - Auswirkungen auf Teamerfolg
 
 ---
@@ -265,7 +265,7 @@ Formulieren Sie **fundierte Antworten** auf die folgenden Fragen.
 
 ### 3. Clientseitige Architektur - Vor- und Nachteile
 
-> **Thema:** Der "Smart Recipe Hub" wurde mit einer reinen clientseitigen Architektur entwickelt. Analysieren Sie die Vorteile und potenziellen Nachteile dieser technischen Entscheidung im Kontext der Produktvision und der definierten Zielgruppen.
+> **Thema:** Der "YummyGo" wurde mit einer reinen clientseitigen Architektur entwickelt. Analysieren Sie die Vorteile und potenziellen Nachteile dieser technischen Entscheidung im Kontext der Produktvision und der definierten Zielgruppen.
 
 **Vorteile (✅):**
 - Keine Serverkosten → Ideal für Studierende (Zielgruppe)
@@ -489,7 +489,7 @@ Nach dem Durcharbeiten dieses Leitfadens können Sie:
 - ✅ Die drei Scrum-Rollen und ihre Verantwortlichkeiten beschreiben
 - ✅ Die Scrum-Ereignisse (Events) verstehen und deren Zweck erläutern
 - ✅ User Stories formulieren und priorisieren
-- ✅ Die technische Architektur des Smart Recipe Hub analysieren
+- ✅ Die technische Architektur des YummyGo analysieren
 - ✅ Priorisierungsmethoden anwenden (MSCW, Kano, Wert/Risiko)
 - ✅ Den agilen Entwicklungsprozess von der Vision zum Inkrement nachvollziehen
 
@@ -499,10 +499,10 @@ Nach dem Durcharbeiten dieses Leitfadens können Sie:
 
 - **Scrum Guide:** [scrumguides.org](https://scrumguides.org/)
 - **Agiles Manifest:** [agilemanifesto.org](https://agilemanifesto.org/)
-- **Smart Recipe Hub Repository:** [github.com/Watchkido/KochAPP](https://github.com/Watchkido/KochAPP)
+- **YummyGo Repository:** [github.com/Watchkido/KochAPP](https://github.com/Watchkido/KochAPP)
 
 ---
 
 **Stand:** November 2025  
 **Version:** 2.0  
-**Autor:** Scrum-Team Smart Recipe Hub
+**Autor:** Scrum-Team YummyGo

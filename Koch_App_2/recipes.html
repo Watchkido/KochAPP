@@ -1,6 +1,6 @@
 <!--
     recipes.html logo Farben
-    Übersichtsseite für alle Rezepte im Smart Recipe Hub.
+    Übersichtsseite für alle Rezepte im YummyGo.
     Entwicklerhinweis: Hier werden alle Rezepte aus der Datenbank angezeigt und gefiltert.
 -->
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alle Rezepte - Smart Recipe Hub</title>
+    <title>Alle Rezepte - YummyGo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="accessibility.css">
     <script src="accessibility.js"></script>
@@ -38,8 +38,7 @@
         </ul>
         <h3 style="margin-top: 30px;">Informationen</h3>
         <ul>
-
-            <li><a href="kontakt.html">📧 Kontakt</a></li>
+             <li><a href="kontakt.html">📧 Kontakt</a></li>
             <li><a href="faq.html">❓ FAQ / Hilfe</a></li>
             <li><a href="tutorial.html">📚 Tutorial</a></li>
         </ul>
@@ -48,7 +47,7 @@
             <li><a href="export.html">📄 Rezepte exportieren</a></li>
             <li><a href="feedback.html">💬 Feedback</a></li>
         </ul>
-       
+      
         <h3 style="margin-top: 30px;">Rechtliches</h3>
         <ul>
             <li><a href="impressum.html">ℹ️ Impressum</a></li>
@@ -58,10 +57,31 @@
     </aside>
 
     <header>
-        <div class="container">
-            <h1>Smart Recipe Hub</h1>
-            <p class="tagline">Kochen leicht gemacht – in 5 Minuten zum passenden Rezept!</p>
+        <div class="header-flex">
+            <img src="images/weisses_logo.png" alt="Logo" class="logo" id="mainLogo">
+            <div class="header-center">
+                <h1>YummyGo</h1>
+                <p class="tagline">Kochen leicht gemacht – in 5 Minuten zum passenden Rezept!</p>
+            </div>
         </div>
+    <style>
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            left: 0;
+            height: 180px;
+            margin-left: 20px;
+        }
+        .header-center {
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
     </header>
 
     <nav>
@@ -79,20 +99,22 @@
         <h2>Alle Rezepte</h2>
         
         <div class="search-bar">
-            <form id="search-form">
-                <input type="text" id="search-input" placeholder="Rezepte suchen...">
-                <button type="submit" class="btn primary">Suchen</button>
-            </form>
-        </div>
-        
-        <div id="all-recipes-list" class="recipe-grid">
-            <!-- Rezepte werden hier geladen -->
-        </div>
+    <form id="search-form" style="display: flex; gap: 0.5rem; align-items: center;">
+        <input type="text" id="search-input" placeholder="Rezepte suchen...">
+        <button type="submit" class="btn primary">Suchen</button>
+        <button id="randomRecipeBtn" type="button" class="btn secondary">🎲 Zufälliges Rezept</button>
+    </form>
+</div>
+
+<div id="all-recipes-list" class="recipe-grid">
+    <!-- Rezepte werden hier geladen -->
+</div>
+
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Smart Recipe Hub. Ein agiles Projekt umgesetzt mit Scrum.</p>
+            <p>&copy; 2024 YummyGo. Ein agiles Projekt umgesetzt mit Scrum.</p>
             <p>
                 <a href="impressum.html">Impressum</a> | 
                 <a href="datenschutz.html">Datenschutz</a> |
